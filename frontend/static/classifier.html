@@ -1,0 +1,482 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="minimum-scale=1, initial-scale=1, width=device-width" name="viewport"/>
+  <meta content="Image Classification" name="description"/>
+  <meta content="image, classification, machine learning" name="keywords"/>
+  <title>
+   Chi's Main Classifier
+  </title>
+  <meta content="5" name="next-head-count"/>
+  <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link as="style" href='{% static "/_next/static/css/69f81e06845cd7ae.css" %}' rel="preload"/>
+  <link data-n-g="" href='{% static "/_next/static/css/69f81e06845cd7ae.css" %}' rel="stylesheet"/>
+  <noscript data-n-css="">
+  </noscript>
+  <script defer="" nomodule="" src='{% static "/_next/static/chunks/polyfills-0d1b80a048d4787e.js" %}'>
+  </script>
+  <script defer="" src='{% static "/_next/static/chunks/webpack-df4cf1c8d23aa877.js" %}'>
+  </script>
+  <script defer="" src='{% static "/_next/static/chunks/framework-5f4595e5518b5600.js" %}'>
+  </script>
+  <script defer="" src='{% static "/_next/static/chunks/main-959cc2ac3c742fb4.js" %}'>
+  </script>
+  <script defer="" src='{% static "/_next/static/chunks/pages/_app-fb834dc1c18f6b5f.js" %}'>
+  </script>
+  <script defer="" src='{% static "/_next/static/chunks/f357f4e3-22ef9e913d36c262.js" %}'>
+  </script>
+  <script defer="" src='{% static "/_next/static/chunks/663-184b2bc61a6928bb.js" %}'>
+  </script>
+  <script defer="" src='{% static "/_next/static/chunks/pages/classifier-e5973ee243a3bbf8.js" %}'>
+  </script>
+  <script defer="" src='{% static "/_next/static/ouYKFw-anUtWZe5kXsJXk/_buildManifest.js" %}'>
+  </script>
+  <script defer="" src='{% static "/_next/static/ouYKFw-anUtWZe5kXsJXk/_ssgManifest.js" %}'>
+  </script>
+  <style data-href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&amp;display=swap">
+   @font-face{font-family:'Libre Baskerville';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/librebaskerville/v14/kmKiZrc3Hgbbcjq75U4uslyuy4kn0qviTjYz.woff) format('woff')}@font-face{font-family:'Libre Baskerville';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/librebaskerville/v14/kmKiZrc3Hgbbcjq75U4uslyuy4kn0qviTgY5KcC-wLOjAUw.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Libre Baskerville';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/librebaskerville/v14/kmKiZrc3Hgbbcjq75U4uslyuy4kn0qviTgY3KcC-wLOj.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  </style>
+ </head>
+ <body>
+  <div data-reactroot="" id="__next">
+   <style data-emotion="css-global vq6u18">
+    html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:600;}body{margin:0;color:rgb(60, 60, 60);font-family:"Roboto",sans-serif;font-weight:400;font-size:0.9285714285714286rem;line-height:1.5;background-color:rgb(242, 243, 245);}@media print{body{background-color:#fff;}}body::backdrop{background-color:rgb(242, 243, 245);}
+   </style>
+   <style data-emotion="css iupccy">
+    .css-iupccy{background-color:rgb(0, 0, 0);height:10%;}
+   </style>
+   <div class="MuiBox-root css-iupccy">
+    <style data-emotion="css 1xwai63">
+     .css-1xwai63{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;box-sizing:border-box;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;position:fixed;z-index:1100;top:0;left:auto;right:0;background-color:rgb(2, 15, 45);color:#fff;color:#fff;}@media print{.css-1xwai63{position:absolute;}}
+    </style>
+    <style data-emotion="css 1vb9u1c">
+     .css-1vb9u1c{background-color:rgb(255, 255, 255);color:rgb(60, 60, 60);-webkit-transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;box-shadow:0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;box-sizing:border-box;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;position:fixed;z-index:1100;top:0;left:auto;right:0;background-color:rgb(2, 15, 45);color:#fff;color:#fff;}@media print{.css-1vb9u1c{position:absolute;}}
+    </style>
+    <header class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation5 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-1vb9u1c">
+     <style data-emotion="css 3nlg2h">
+      .css-3nlg2h{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-left:16px;padding-right:16px;min-height:56px;min-height:70px;}@media (min-width:600px){.css-3nlg2h{padding-left:24px;padding-right:24px;}}@media (min-width:0px){@media (orientation: landscape){.css-3nlg2h{min-height:48px;}}}@media (min-width:600px){.css-3nlg2h{min-height:64px;}}
+     </style>
+     <div class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-3nlg2h">
+      <style data-emotion="css y4blpq">
+       .css-y4blpq{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.3928571428571428rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:inherit;}.css-y4blpq:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-y4blpq:hover{background-color:transparent;}}.css-y4blpq.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}@media (min-width:900px){.css-y4blpq{display:none;}}
+      </style>
+      <style data-emotion="css 1ld3ow3">
+       .css-1ld3ow3{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.3928571428571428rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:inherit;}.css-1ld3ow3::-moz-focus-inner{border-style:none;}.css-1ld3ow3.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1ld3ow3{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1ld3ow3:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1ld3ow3:hover{background-color:transparent;}}.css-1ld3ow3.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}@media (min-width:900px){.css-1ld3ow3{display:none;}}
+      </style>
+      <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeMedium css-1ld3ow3" tabindex="0" type="button">
+       <style data-emotion="css vnjz4i">
+        .css-vnjz4i{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.3928571428571428rem;}
+       </style>
+       <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vnjz4i" data-testid="MenuIcon" focusable="false" viewbox="0 0 24 24">
+        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z">
+        </path>
+       </svg>
+      </button>
+      <style data-emotion="css 1cd7lb9">
+       @media (min-width:0px){.css-1cd7lb9{display:none;}}@media (min-width:900px){.css-1cd7lb9{display:inline;}}
+      </style>
+      <div class="MuiBox-root css-1cd7lb9">
+       <style data-emotion="css 1ghrl6a">
+        .css-1ghrl6a{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.3928571428571428rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;padding:12px;font-size:1.625rem;}.css-1ghrl6a:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1ghrl6a:hover{background-color:transparent;}}.css-1ghrl6a.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+       </style>
+       <style data-emotion="css 19so0mk">
+        .css-19so0mk{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.3928571428571428rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;padding:12px;font-size:1.625rem;}.css-19so0mk::-moz-focus-inner{border-style:none;}.css-19so0mk.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-19so0mk{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-19so0mk:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-19so0mk:hover{background-color:transparent;}}.css-19so0mk.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+       </style>
+       <button class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-19so0mk" disabled="" tabindex="-1" type="button">
+        <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vnjz4i" data-testid="CameraAltIcon" focusable="false" style="color:#fff;height:50px;width:30px" viewbox="0 0 24 24">
+         <circle cx="12" cy="12" r="3.2">
+         </circle>
+         <path d="M9 2 7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z">
+         </path>
+        </svg>
+        <style data-emotion="css 11ny4pk">
+         .css-11ny4pk{margin:0;font-size:1.75rem;font-weight:600;line-height:1.25;font-family:"Roboto",sans-serif;color:#fff;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;font-family:"Libre Baskerville";font-weight:600;-webkit-text-decoration:none;text-decoration:none;margin-left:10px;}
+        </style>
+        <h1 class="MuiTypography-root MuiTypography-h2 css-11ny4pk">
+         Dog Breeds Classification
+        </h1>
+       </button>
+      </div>
+      <style data-emotion="css i9gxme">
+       .css-i9gxme{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;}
+      </style>
+      <div class="MuiBox-root css-i9gxme">
+      </div>
+      <style data-emotion="css oln6gq">
+       .css-oln6gq{font-weight:600;font-family:"Roboto",sans-serif;font-size:0.7544642857142857rem;line-height:1.75;text-transform:uppercase;min-width:64px;padding:4px 5px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:rgb(2, 15, 45);color:#fff;font-family:"Roboto",sans-serif;font-weight:500;font-size:0.9285714285714286rem;line-height:1.75;margin-right:16px;}.css-oln6gq:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(2, 15, 45, 0.04);}@media (hover: none){.css-oln6gq:hover{background-color:transparent;}}.css-oln6gq.Mui-disabled{color:rgba(0, 0, 0, 0.26);}.css-oln6gq svg{margin-right:4px;}
+      </style>
+      <style data-emotion="css u7ihf3">
+       .css-u7ihf3{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;font-weight:600;font-family:"Roboto",sans-serif;font-size:0.7544642857142857rem;line-height:1.75;text-transform:uppercase;min-width:64px;padding:4px 5px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:rgb(2, 15, 45);color:#fff;font-family:"Roboto",sans-serif;font-weight:500;font-size:0.9285714285714286rem;line-height:1.75;margin-right:16px;}.css-u7ihf3::-moz-focus-inner{border-style:none;}.css-u7ihf3.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-u7ihf3{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-u7ihf3:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(2, 15, 45, 0.04);}@media (hover: none){.css-u7ihf3:hover{background-color:transparent;}}.css-u7ihf3.Mui-disabled{color:rgba(0, 0, 0, 0.26);}.css-u7ihf3 svg{margin-right:4px;}
+      </style>
+      <a class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-u7ihf3" href="/" tabindex="0">
+       <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vnjz4i" data-testid="HomeOutlinedIcon" focusable="false" viewbox="0 0 24 24">
+        <path d="m12 5.69 5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3 2 12h3v8h6v-6h2v6h6v-8h3L12 3z">
+        </path>
+       </svg>
+       Home
+      </a>
+      <a class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-u7ihf3" href="/classifier" tabindex="0">
+       <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vnjz4i" data-testid="InsertPhotoOutlinedIcon" focusable="false" viewbox="0 0 24 24">
+        <path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4.86 8.86-3 3.87L9 13.14 6 17h12l-3.86-5.14z">
+        </path>
+       </svg>
+       Image Classifier
+      </a>
+      <style data-emotion="css 1bz42as">
+       .css-1bz42as{margin:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;border-width:0;border-style:solid;border-color:rgb(197, 197, 197);border-bottom-width:0;height:100%;border-right-width:thin;height:32px;margin-left:16px;margin-right:16px;}@media (min-width:0px){.css-1bz42as{display:none;}}@media (min-width:900px){.css-1bz42as{display:none;}}@media (min-width:1200px){.css-1bz42as{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}}
+      </style>
+      <hr class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical css-1bz42as"/>
+      <style data-emotion="css x4v26s">
+       @media (min-width:0px){.css-x4v26s{display:none;}}@media (min-width:900px){.css-x4v26s{display:none;}}@media (min-width:1200px){.css-x4v26s{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}}
+      </style>
+      <div class="MuiBox-root css-x4v26s">
+       <style data-emotion="css 1amx1be">
+        .css-1amx1be{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.3928571428571428rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:rgb(2, 15, 45);color:#fff;font-family:"Roboto",sans-serif;font-weight:500;font-size:0.9285714285714286rem;line-height:1.75;margin-right:16px;}.css-1amx1be:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1amx1be:hover{background-color:transparent;}}.css-1amx1be:hover{background-color:rgba(2, 15, 45, 0.04);}@media (hover: none){.css-1amx1be:hover{background-color:transparent;}}.css-1amx1be.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}.css-1amx1be svg{margin-right:4px;}
+       </style>
+       <style data-emotion="css 1npi666">
+        .css-1npi666{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.3928571428571428rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:rgb(2, 15, 45);color:#fff;font-family:"Roboto",sans-serif;font-weight:500;font-size:0.9285714285714286rem;line-height:1.75;margin-right:16px;}.css-1npi666::-moz-focus-inner{border-style:none;}.css-1npi666.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1npi666{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1npi666:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1npi666:hover{background-color:transparent;}}.css-1npi666:hover{background-color:rgba(2, 15, 45, 0.04);}@media (hover: none){.css-1npi666:hover{background-color:transparent;}}.css-1npi666.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}.css-1npi666 svg{margin-right:4px;}
+       </style>
+       <a aria-label="LinkedIn" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeMedium css-1npi666" href="https://www.linkedin.com/in/chi-han-lin-498310126/" tabindex="0" target="_blank">
+        <style data-emotion="css 1lme6gy">
+         .css-1lme6gy{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:2.03125rem;}
+        </style>
+        <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-1lme6gy" data-testid="LinkedInIcon" focusable="false" viewbox="0 0 24 24">
+         <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z">
+         </path>
+        </svg>
+       </a>
+       <a aria-label="Instagram" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeMedium css-1npi666" href="https://www.instagram.com/chihan.lin/" tabindex="0" target="_blank">
+        <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-1lme6gy" data-testid="InstagramIcon" focusable="false" viewbox="0 0 24 24">
+         <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z">
+         </path>
+        </svg>
+       </a>
+      </div>
+      <style data-emotion="css q4o6hk">
+       .css-q4o6hk{margin:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;border-width:0;border-style:solid;border-color:rgb(197, 197, 197);border-bottom-width:thin;}
+      </style>
+      <hr class="MuiDivider-root MuiDivider-fullWidth css-q4o6hk"/>
+     </div>
+     <hr class="MuiDivider-root MuiDivider-fullWidth css-q4o6hk"/>
+    </header>
+    <style data-emotion="css a3xyjy">
+     .css-a3xyjy{z-index:1200;}
+    </style>
+    <main>
+     <style data-emotion="css 1653akk">
+      .css-1653akk{background-color:rgb(242, 243, 245);min-height:100%;padding-top:120px;padding-bottom:120px;}
+     </style>
+     <div class="MuiBox-root css-1653akk">
+      <style data-emotion="css 10ur324">
+       .css-10ur324{width:100%;margin-left:auto;box-sizing:border-box;margin-right:auto;display:block;padding-left:16px;padding-right:16px;}@media (min-width:600px){.css-10ur324{padding-left:24px;padding-right:24px;}}
+      </style>
+      <div class="MuiContainer-root css-10ur324">
+       <style data-emotion="css 1h77wgb">
+        .css-1h77wgb{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-24px;width:calc(100% + 24px);margin-left:-24px;}.css-1h77wgb>.MuiGrid-item{padding-top:24px;}.css-1h77wgb>.MuiGrid-item{padding-left:24px;}
+       </style>
+       <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-1h77wgb">
+        <style data-emotion="css 4ouuna">
+         .css-4ouuna{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-24px;width:calc(100% + 24px);margin-left:-24px;-webkit-flex-basis:calc(100% + 24px);-ms-flex-preferred-size:calc(100% + 24px);flex-basis:calc(100% + 24px);-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:calc(100% + 24px);-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;margin-top:-30px;}.css-4ouuna>.MuiGrid-item{padding-top:24px;}.css-4ouuna>.MuiGrid-item{padding-left:24px;}@media (min-width:600px){.css-4ouuna{-webkit-flex-basis:calc(100% + 24px);-ms-flex-preferred-size:calc(100% + 24px);flex-basis:calc(100% + 24px);-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:calc(100% + 24px);}}@media (min-width:900px){.css-4ouuna{-webkit-flex-basis:calc(100% + 24px);-ms-flex-preferred-size:calc(100% + 24px);flex-basis:calc(100% + 24px);-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:calc(100% + 24px);}}@media (min-width:1200px){.css-4ouuna{-webkit-flex-basis:calc(100% + 24px);-ms-flex-preferred-size:calc(100% + 24px);flex-basis:calc(100% + 24px);-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:calc(100% + 24px);}}@media (min-width:1536px){.css-4ouuna{-webkit-flex-basis:calc(100% + 24px);-ms-flex-preferred-size:calc(100% + 24px);flex-basis:calc(100% + 24px);-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:calc(100% + 24px);}}
+        </style>
+        <div class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-spacing-xs-3 MuiGrid-grid-xs-12 css-4ouuna">
+         <style data-emotion="css 1wxaqej">
+          .css-1wxaqej{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+         </style>
+         <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <style data-emotion="css 5z31li">
+           .css-5z31li{margin:0;font-size:1.75rem;font-weight:600;line-height:1.25;font-family:"Roboto",sans-serif;color:rgb(60, 60, 60);}
+          </style>
+          <h2 class="MuiTypography-root MuiTypography-h2 css-5z31li">
+           Classifier
+          </h2>
+          <style data-emotion="css 1v3caum">
+           .css-1v3caum{padding-top:16px;}
+          </style>
+          <div class="MuiBox-root css-1v3caum">
+           <style data-emotion="css 1p9twjo">
+            .css-1p9twjo{margin:0;font-size:1.0625rem;font-weight:500;line-height:1.25;font-family:"Roboto",sans-serif;color:rgb(123, 132, 140);}
+           </style>
+           <h5 class="MuiTypography-root MuiTypography-h5 css-1p9twjo">
+            Select your favorite dog picture for classification
+           </h5>
+          </div>
+         </div>
+         <style data-emotion="css 15j76c0">
+          .css-15j76c0{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:100%;}@media (min-width:600px){.css-15j76c0{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:100%;}}@media (min-width:900px){.css-15j76c0{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:100%;}}@media (min-width:1200px){.css-15j76c0{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:100%;}}@media (min-width:1536px){.css-15j76c0{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:100%;}}
+         </style>
+         <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-15j76c0">
+         </div>
+        </div>
+        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-15j76c0">
+         <style data-emotion="css i6bazn">
+          .css-i6bazn{overflow:hidden;}
+         </style>
+         <style data-emotion="css 1o47fy4">
+          .css-1o47fy4{background-color:rgb(255, 255, 255);color:rgb(60, 60, 60);-webkit-transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;border-radius:4px;box-shadow:0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);overflow:hidden;}
+         </style>
+         <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1o47fy4">
+          <style data-emotion="css 1qw96cp">
+           .css-1qw96cp{padding:16px;}.css-1qw96cp:last-child{padding-bottom:24px;}
+          </style>
+          <div class="MuiCardContent-root css-1qw96cp">
+           <style data-emotion="css 5cuwwm">
+            .css-5cuwwm{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;margin-bottom:-30px;}
+           </style>
+           <div class="MuiBox-root css-5cuwwm">
+            <div>
+             <style data-emotion="css 1p7z8ns">
+              .css-1p7z8ns{-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;border:1px solid;border-radius:4px;border-color:rgb(197, 197, 197);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;padding:48px;}.css-1p7z8ns:hover{background-color:rgba(0, 0, 0, 0.04);cursor:pointer;opacity:0.5;}
+             </style>
+             <div class="MuiBox-root css-1p7z8ns" role="button" tabindex="0">
+              <input accept="image/jpeg,image/jpg,image/png,image/gif" autocomplete="off" multiple="" style="display:none" tabindex="-1" type="file"/>
+              <style data-emotion="css 1w2huxp">
+               .css-1w2huxp img{width:100px;}
+              </style>
+              <div class="MuiBox-root css-1w2huxp">
+              </div>
+              <style data-emotion="css 19midj6">
+               .css-19midj6{padding:16px;}
+              </style>
+              <div class="MuiBox-root css-19midj6">
+               <style data-emotion="css m122nf">
+                .css-m122nf{margin:0;font-size:1.125rem;font-weight:500;line-height:1.25;font-family:"Roboto",sans-serif;text-align:center;}
+               </style>
+               <h4 class="MuiTypography-root MuiTypography-h4 MuiTypography-alignCenter css-m122nf">
+                <svg aria-hidden="true" class="svg-inline--fa fa-image" data-icon="image" data-prefix="far" focusable="false" role="img" style="height:100px;width:100px;color:rgb(123, 132, 140)" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                 <path d="M152 120c-26.51 0-48 21.49-48 48s21.49 48 48 48s48-21.49 48-48S178.5 120 152 120zM447.1 32h-384C28.65 32-.0091 60.65-.0091 96v320c0 35.35 28.65 64 63.1 64h384c35.35 0 64-28.65 64-64V96C511.1 60.65 483.3 32 447.1 32zM463.1 409.3l-136.8-185.9C323.8 218.8 318.1 216 312 216c-6.113 0-11.82 2.768-15.21 7.379l-106.6 144.1l-37.09-46.1c-3.441-4.279-8.934-6.809-14.77-6.809c-5.842 0-11.33 2.529-14.78 6.809l-75.52 93.81c0-.0293 0 .0293 0 0L47.99 96c0-8.822 7.178-16 16-16h384c8.822 0 16 7.178 16 16V409.3z" fill="currentColor">
+                 </path>
+                </svg>
+               </h4>
+               <style data-emotion="css 178yklu">
+                .css-178yklu{margin-top:24px;}
+               </style>
+               <div class="MuiBox-root css-178yklu">
+                <style data-emotion="css umvk72">
+                 .css-umvk72{margin:0;font-family:"Roboto",sans-serif;font-weight:400;font-size:0.9285714285714286rem;line-height:1.5;color:rgb(123, 132, 140);}
+                </style>
+                <p class="MuiTypography-root MuiTypography-body1 css-umvk72">
+                 Drag and drop an image here, or
+                 <!-- -->
+                 <style data-emotion="css 1jhrgup">
+                  .css-1jhrgup{-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(2, 15, 45, 0.4);}.css-1jhrgup:hover{text-decoration-color:inherit;}
+                 </style>
+                 <style data-emotion="css 19xxup6">
+                  .css-19xxup6{margin:0;color:rgb(2, 15, 45);-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(2, 15, 45, 0.4);}.css-19xxup6:hover{text-decoration-color:inherit;}
+                 </style>
+                 <a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-19xxup6">
+                  click
+                 </a>
+                 <!-- -->
+                 to select an image
+                </p>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <style data-emotion="css byre8r">
+            .css-byre8r{width:100%;margin:0 auto;padding-top:56px;}@media (min-width:600px){.css-byre8r{max-width:720px;}}@media (min-width:900px){.css-byre8r{max-width:1236px;}}
+           </style>
+           <div class="MuiBox-root css-byre8r">
+            <hr class="MuiDivider-root MuiDivider-fullWidth css-q4o6hk"/>
+           </div>
+           <style data-emotion="css 37lu5z">
+            .css-37lu5z{width:100%;margin:0 auto;padding-top:16px;}@media (min-width:600px){.css-37lu5z{max-width:720px;}}@media (min-width:900px){.css-37lu5z{max-width:1236px;}}
+           </style>
+           <div class="MuiBox-root css-37lu5z">
+            <div class="MuiBox-root css-1v3caum" data-aos="fade-up">
+             <style data-emotion="css h6yr9k">
+              .css-h6yr9k{width:100%;margin-left:auto;box-sizing:border-box;margin-right:auto;display:block;padding-left:16px;padding-right:16px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}@media (min-width:600px){.css-h6yr9k{padding-left:24px;padding-right:24px;}}@media (min-width:1200px){.css-h6yr9k{max-width:1200px;}}@media (min-width:900px){.css-h6yr9k{padding-left:15px!important;padding-right:15px!important;}}
+             </style>
+             <div class="MuiContainer-root MuiContainer-maxWidthLg css-h6yr9k" display="flex">
+              <style data-emotion="css 1j4k28">
+               .css-1j4k28{margin:0;font-size:1.125rem;font-weight:500;line-height:1.25;font-family:"Roboto",sans-serif;text-align:left;color:rgb(60, 60, 60);margin-bottom:15px;}
+              </style>
+              <h4 class="MuiTypography-root MuiTypography-h4 MuiTypography-alignLeft css-1j4k28" data-aos="fade-up">
+               A step-by-step guide
+              </h4>
+              <style data-emotion="css 1tz8m30">
+               .css-1tz8m30{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-32px;width:calc(100% + 32px);margin-left:-32px;}.css-1tz8m30>.MuiGrid-item{padding-top:32px;}.css-1tz8m30>.MuiGrid-item{padding-left:32px;}
+              </style>
+              <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-1tz8m30" data-aos="fade-up">
+               <style data-emotion="css 19egsyp">
+                .css-19egsyp{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:100%;}@media (min-width:600px){.css-19egsyp{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:100%;}}@media (min-width:900px){.css-19egsyp{-webkit-flex-basis:33.333333%;-ms-flex-preferred-size:33.333333%;flex-basis:33.333333%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:33.333333%;}}@media (min-width:1200px){.css-19egsyp{-webkit-flex-basis:33.333333%;-ms-flex-preferred-size:33.333333%;flex-basis:33.333333%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:33.333333%;}}@media (min-width:1536px){.css-19egsyp{-webkit-flex-basis:33.333333%;-ms-flex-preferred-size:33.333333%;flex-basis:33.333333%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:33.333333%;}}
+               </style>
+               <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-19egsyp">
+                <style data-emotion="css uwwqev">
+                 .css-uwwqev{width:100%;height:100%;}
+                </style>
+                <div class="MuiBox-root css-uwwqev">
+                 <style data-emotion="css 1lxwves">
+                  .css-1lxwves{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;}
+                 </style>
+                 <div class="MuiBox-root css-1lxwves">
+                  <style data-emotion="css 1w9bfph">
+                   .css-1w9bfph{width:50px;height:50px;margin-bottom:16px;background-color:rgb(2, 15, 45);color:rgb(255, 255, 255);}
+                  </style>
+                  <style data-emotion="css 1otwvje">
+                   .css-1otwvje{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;width:40px;height:40px;font-family:"Roboto",sans-serif;font-size:1.1607142857142858rem;line-height:1;border-radius:50%;overflow:hidden;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;color:rgb(242, 243, 245);background-color:#bdbdbd;width:50px;height:50px;margin-bottom:16px;background-color:rgb(2, 15, 45);color:rgb(255, 255, 255);width:50px;height:50px;margin-bottom:16px;background-color:rgb(2, 15, 45);color:rgb(255, 255, 255);}
+                  </style>
+                  <div class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault MuiBox-root css-1otwvje">
+                   <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vnjz4i" data-testid="AddPhotoAlternateIcon" focusable="false" style="height:25px;width:25px" viewbox="0 0 24 24">
+                    <path d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8h-3zM5 19l3-4 2 3 3-4 4 5H5z">
+                    </path>
+                   </svg>
+                  </div>
+                  <style data-emotion="css 1l22wgz">
+                   .css-1l22wgz{margin:0;font-size:1rem;font-weight:500;line-height:1.25;font-family:"Roboto",sans-serif;margin-bottom:0.35em;font-weight:700;}
+                  </style>
+                  <h6 class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-1l22wgz">
+                   Select an Image
+                  </h6>
+                  <p class="MuiTypography-root MuiTypography-body1 css-umvk72">
+                   Upload a desire image from local album or drag-and-drop it into the provided dropzone.
+                  </p>
+                 </div>
+                </div>
+               </div>
+               <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-19egsyp">
+                <div class="MuiBox-root css-uwwqev">
+                 <div class="MuiBox-root css-1lxwves">
+                  <div class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault MuiBox-root css-1otwvje">
+                   <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vnjz4i" data-testid="SendIcon" focusable="false" style="height:25px;width:25px" viewbox="0 0 24 24">
+                    <path d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z">
+                    </path>
+                   </svg>
+                  </div>
+                  <h6 class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-1l22wgz">
+                   Send the Image
+                  </h6>
+                  <p class="MuiTypography-root MuiTypography-body1 css-umvk72">
+                   Press the Send Image button to send the image to the machine learning model for classification.
+                  </p>
+                 </div>
+                </div>
+               </div>
+               <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-19egsyp">
+                <div class="MuiBox-root css-uwwqev">
+                 <div class="MuiBox-root css-1lxwves">
+                  <div class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault MuiBox-root css-1otwvje">
+                   <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vnjz4i" data-testid="GetAppIcon" focusable="false" style="height:25px;width:25px" viewbox="0 0 24 24">
+                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z">
+                    </path>
+                   </svg>
+                  </div>
+                  <h6 class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-1l22wgz">
+                   Get the Result
+                  </h6>
+                  <p class="MuiTypography-root MuiTypography-body1 css-umvk72">
+                   The result is printed on the screen and you have an option to go to wikipedia for more information.
+                  </p>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <style data-emotion="css 1lod4ir">
+            .css-1lod4ir{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}
+           </style>
+           <div class="MuiBox-root css-1lod4ir">
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-15j76c0">
+        </div>
+       </div>
+      </div>
+     </div>
+     <style data-emotion="css 1wc13v0">
+      .css-1wc13v0{background-color:rgb(242, 243, 245);padding-top:48px;}
+     </style>
+     <div class="MuiBox-root css-1wc13v0">
+     </div>
+    </main>
+    <style data-emotion="css 14jvf2n">
+     .css-14jvf2n{background-color:rgb(2, 15, 45);position:fixed;bottom:0;left:0;width:100%;}
+    </style>
+    <div class="MuiBox-root css-14jvf2n">
+     <style data-emotion="css 1ebnq5j">
+      .css-1ebnq5j{background-color:rgb(2, 15, 45);position:relative;padding:8px;}
+     </style>
+     <div class="MuiBox-root css-1ebnq5j">
+      <style data-emotion="css 1d3bbye">
+       .css-1d3bbye{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+      </style>
+      <div class="MuiGrid-root MuiGrid-container css-1d3bbye">
+       <style data-emotion="css yov6up">
+        .css-yov6up{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:100%;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}@media (min-width:600px){.css-yov6up{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:100%;}}@media (min-width:900px){.css-yov6up{-webkit-flex-basis:33.333333%;-ms-flex-preferred-size:33.333333%;flex-basis:33.333333%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:33.333333%;}}@media (min-width:1200px){.css-yov6up{-webkit-flex-basis:33.333333%;-ms-flex-preferred-size:33.333333%;flex-basis:33.333333%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:33.333333%;}}@media (min-width:1536px){.css-yov6up{-webkit-flex-basis:33.333333%;-ms-flex-preferred-size:33.333333%;flex-basis:33.333333%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:33.333333%;}}
+       </style>
+       <div class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-yov6up">
+        <style data-emotion="css 1ontqvh">
+         .css-1ontqvh{list-style:none;margin:0;padding:0;position:relative;padding-top:8px;padding-bottom:8px;}
+        </style>
+        <ul class="MuiList-root MuiList-padding css-1ontqvh">
+         <style data-emotion="css 2b4dnx">
+          .css-2b4dnx{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative;-webkit-text-decoration:none;text-decoration:none;min-width:0;box-sizing:border-box;text-align:left;padding-top:8px;padding-bottom:8px;-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;padding-left:16px;padding-right:16px;}.css-2b4dnx:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-2b4dnx:hover{background-color:transparent;}}.css-2b4dnx.Mui-selected{background-color:rgba(2, 15, 45, 0.08);}.css-2b4dnx.Mui-selected.Mui-focusVisible{background-color:rgba(2, 15, 45, 0.2);}.css-2b4dnx.Mui-selected:hover{background-color:rgba(2, 15, 45, 0.12);}@media (hover: none){.css-2b4dnx.Mui-selected:hover{background-color:rgba(2, 15, 45, 0.08);}}.css-2b4dnx.Mui-focusVisible{background-color:rgba(0, 0, 0, 0.12);}.css-2b4dnx.Mui-disabled{opacity:0.38;}
+         </style>
+         <style data-emotion="css rkofmw">
+          .css-rkofmw{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative;-webkit-text-decoration:none;text-decoration:none;min-width:0;box-sizing:border-box;text-align:left;padding-top:8px;padding-bottom:8px;-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;padding-left:16px;padding-right:16px;}.css-rkofmw::-moz-focus-inner{border-style:none;}.css-rkofmw.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-rkofmw{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-rkofmw:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-rkofmw:hover{background-color:transparent;}}.css-rkofmw.Mui-selected{background-color:rgba(2, 15, 45, 0.08);}.css-rkofmw.Mui-selected.Mui-focusVisible{background-color:rgba(2, 15, 45, 0.2);}.css-rkofmw.Mui-selected:hover{background-color:rgba(2, 15, 45, 0.12);}@media (hover: none){.css-rkofmw.Mui-selected:hover{background-color:rgba(2, 15, 45, 0.08);}}.css-rkofmw.Mui-focusVisible{background-color:rgba(0, 0, 0, 0.12);}.css-rkofmw.Mui-disabled{opacity:0.38;}
+         </style>
+         <div class="MuiListItemButton-root MuiListItemButton-gutters MuiButtonBase-root css-rkofmw" role="button" tabindex="0">
+          <style data-emotion="css 1tsvksn">
+           .css-1tsvksn{-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;min-width:0;margin-top:4px;margin-bottom:4px;}
+          </style>
+          <div class="MuiListItemText-root css-1tsvksn">
+           <style data-emotion="css 1lvv30u">
+            .css-1lvv30u{margin:0;font-family:"Roboto",sans-serif;font-weight:400;font-size:0.8125rem;line-height:1.43;color:rgb(123, 132, 140);}
+           </style>
+           <p class="MuiTypography-root MuiTypography-body2 css-1lvv30u">
+            Copyright ©
+            <!-- -->
+            2022
+            <!-- -->
+            Chi-Han.Lin FMP.
+           </p>
+          </div>
+         </div>
+        </ul>
+       </div>
+       <div class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-yov6up">
+        <ul class="MuiList-root MuiList-padding css-1ontqvh">
+         <div class="MuiListItemButton-root MuiListItemButton-gutters MuiButtonBase-root css-rkofmw" role="button" tabindex="0">
+          <div class="MuiListItemText-root css-1tsvksn">
+           <p class="MuiTypography-root MuiTypography-body2 css-1lvv30u">
+            Image by
+            <!-- -->
+            <style data-emotion="css dl1hpv">
+             .css-dl1hpv{-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(123, 132, 140, 0.4);color:rgb(123, 132, 140);}.css-dl1hpv:hover{text-decoration-color:inherit;}
+            </style>
+            <style data-emotion="css 17zgj4h">
+             .css-17zgj4h{margin:0;color:rgb(123, 132, 140);-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(123, 132, 140, 0.4);color:rgb(123, 132, 140);}.css-17zgj4h:hover{text-decoration-color:inherit;}
+            </style>
+            <a alt="starline" class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-17zgj4h" href="https://www.freepik.com/author/starline" rel="noreferrer" target="_blank">
+             starline
+            </a>
+            <!-- -->
+            on
+            <!-- -->
+            <a alt="Unsplash" class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-17zgj4h" href="https://www.freepik.com/free-vector/technological-background-with-circuit-lines-diagram-blue-color_9106760.htm#page=2&amp;query=digital%20technology%20background&amp;position=5&amp;from_view=search#position=5&amp;page=2&amp;query=digital%20technology%20background" rel="noreferrer" target="_blank">
+             freepik
+            </a>
+            .
+           </p>
+          </div>
+         </div>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script id="__NEXT_DATA__" type="application/json">
+   {"props":{"pageProps":{}},"page":"/classifier","query":{},"buildId":"ouYKFw-anUtWZe5kXsJXk","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}
+  </script>
+ </body>
+</html>

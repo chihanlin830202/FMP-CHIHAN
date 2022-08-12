@@ -1,0 +1,313 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="minimum-scale=1, initial-scale=1, width=device-width" name="viewport"/>
+  <meta content="Image Classification" name="description"/>
+  <meta content="image, classification, machine learning" name="keywords"/>
+  <title>
+   Chi's Classicfication App
+  </title>
+  <meta content="5" name="next-head-count"/>
+  <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link as="style" href='{% static "/_next/static/css/69f81e06845cd7ae.css" %}' rel="preload"/>
+  <link data-n-g="" href='{% static "/_next/static/css/69f81e06845cd7ae.css" %}' rel="stylesheet"/>
+  <noscript data-n-css="">
+  </noscript>
+  <script defer="" nomodule="" src='{% static "/_next/static/chunks/polyfills-0d1b80a048d4787e.js" %}'>
+  </script>
+  <script defer="" src='{% static "/_next/static/chunks/webpack-df4cf1c8d23aa877.js" %}'>
+  </script>
+  <script defer="" src='{% static "/_next/static/chunks/framework-5f4595e5518b5600.js" %}'>
+  </script>
+  <script defer="" src='{% static "/_next/static/chunks/main-959cc2ac3c742fb4.js" %}'>
+  </script>
+  <script defer="" src='{% static "/_next/static/chunks/pages/_app-fb834dc1c18f6b5f.js" %}'>
+  </script>
+  <script defer="" src='{% static "/_next/static/chunks/876-19a2993fba86662f.js" %}'>
+  </script>
+  <script defer="" src='{% static "/_next/static/chunks/pages/index-03c48af8e18f926a.js" %}'>
+  </script>
+  <script defer="" src='{% static "/_next/static/ouYKFw-anUtWZe5kXsJXk/_buildManifest.js" %}'>
+  </script>
+  <script defer="" src='{% static "/_next/static/ouYKFw-anUtWZe5kXsJXk/_ssgManifest.js" %}'>
+  </script>
+  <style data-href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&amp;display=swap">
+   @font-face{font-family:'Libre Baskerville';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/librebaskerville/v14/kmKiZrc3Hgbbcjq75U4uslyuy4kn0qviTjYz.woff) format('woff')}@font-face{font-family:'Libre Baskerville';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/librebaskerville/v14/kmKiZrc3Hgbbcjq75U4uslyuy4kn0qviTgY5KcC-wLOjAUw.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Libre Baskerville';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/librebaskerville/v14/kmKiZrc3Hgbbcjq75U4uslyuy4kn0qviTgY3KcC-wLOj.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  </style>
+ </head>
+ <body>
+  <div data-reactroot="" id="__next">
+   <style data-emotion="css-global vq6u18">
+    html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:600;}body{margin:0;color:rgb(60, 60, 60);font-family:"Roboto",sans-serif;font-weight:400;font-size:0.9285714285714286rem;line-height:1.5;background-color:rgb(242, 243, 245);}@media print{body{background-color:#fff;}}body::backdrop{background-color:rgb(242, 243, 245);}
+   </style>
+   <style data-emotion="css iupccy">
+    .css-iupccy{background-color:rgb(0, 0, 0);height:10%;}
+   </style>
+   <div class="MuiBox-root css-iupccy">
+    <style data-emotion="css 1xwai63">
+     .css-1xwai63{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;box-sizing:border-box;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;position:fixed;z-index:1100;top:0;left:auto;right:0;background-color:rgb(2, 15, 45);color:#fff;color:#fff;}@media print{.css-1xwai63{position:absolute;}}
+    </style>
+    <style data-emotion="css 1vb9u1c">
+     .css-1vb9u1c{background-color:rgb(255, 255, 255);color:rgb(60, 60, 60);-webkit-transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;box-shadow:0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;box-sizing:border-box;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;position:fixed;z-index:1100;top:0;left:auto;right:0;background-color:rgb(2, 15, 45);color:#fff;color:#fff;}@media print{.css-1vb9u1c{position:absolute;}}
+    </style>
+    <header class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation5 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-1vb9u1c">
+     <style data-emotion="css 3nlg2h">
+      .css-3nlg2h{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-left:16px;padding-right:16px;min-height:56px;min-height:70px;}@media (min-width:600px){.css-3nlg2h{padding-left:24px;padding-right:24px;}}@media (min-width:0px){@media (orientation: landscape){.css-3nlg2h{min-height:48px;}}}@media (min-width:600px){.css-3nlg2h{min-height:64px;}}
+     </style>
+     <div class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-3nlg2h">
+      <style data-emotion="css y4blpq">
+       .css-y4blpq{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.3928571428571428rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:inherit;}.css-y4blpq:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-y4blpq:hover{background-color:transparent;}}.css-y4blpq.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}@media (min-width:900px){.css-y4blpq{display:none;}}
+      </style>
+      <style data-emotion="css 1ld3ow3">
+       .css-1ld3ow3{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.3928571428571428rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:inherit;}.css-1ld3ow3::-moz-focus-inner{border-style:none;}.css-1ld3ow3.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1ld3ow3{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1ld3ow3:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1ld3ow3:hover{background-color:transparent;}}.css-1ld3ow3.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}@media (min-width:900px){.css-1ld3ow3{display:none;}}
+      </style>
+      <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeMedium css-1ld3ow3" tabindex="0" type="button">
+       <style data-emotion="css vnjz4i">
+        .css-vnjz4i{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.3928571428571428rem;}
+       </style>
+       <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vnjz4i" data-testid="MenuIcon" focusable="false" viewbox="0 0 24 24">
+        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z">
+        </path>
+       </svg>
+      </button>
+      <style data-emotion="css 1cd7lb9">
+       @media (min-width:0px){.css-1cd7lb9{display:none;}}@media (min-width:900px){.css-1cd7lb9{display:inline;}}
+      </style>
+      <div class="MuiBox-root css-1cd7lb9">
+       <style data-emotion="css 1ghrl6a">
+        .css-1ghrl6a{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.3928571428571428rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;padding:12px;font-size:1.625rem;}.css-1ghrl6a:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1ghrl6a:hover{background-color:transparent;}}.css-1ghrl6a.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+       </style>
+       <style data-emotion="css 19so0mk">
+        .css-19so0mk{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.3928571428571428rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;padding:12px;font-size:1.625rem;}.css-19so0mk::-moz-focus-inner{border-style:none;}.css-19so0mk.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-19so0mk{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-19so0mk:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-19so0mk:hover{background-color:transparent;}}.css-19so0mk.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+       </style>
+       <button class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-19so0mk" disabled="" tabindex="-1" type="button">
+        <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vnjz4i" data-testid="CameraAltIcon" focusable="false" style="color:#fff;height:50px;width:30px" viewbox="0 0 24 24">
+         <circle cx="12" cy="12" r="3.2">
+         </circle>
+         <path d="M9 2 7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z">
+         </path>
+        </svg>
+        <style data-emotion="css 11ny4pk">
+         .css-11ny4pk{margin:0;font-size:1.75rem;font-weight:600;line-height:1.25;font-family:"Roboto",sans-serif;color:#fff;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;font-family:"Libre Baskerville";font-weight:600;-webkit-text-decoration:none;text-decoration:none;margin-left:10px;}
+        </style>
+        <h1 class="MuiTypography-root MuiTypography-h2 css-11ny4pk">
+         Dog Breeds Classification
+        </h1>
+       </button>
+      </div>
+      <style data-emotion="css i9gxme">
+       .css-i9gxme{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;}
+      </style>
+      <div class="MuiBox-root css-i9gxme">
+      </div>
+      <style data-emotion="css oln6gq">
+       .css-oln6gq{font-weight:600;font-family:"Roboto",sans-serif;font-size:0.7544642857142857rem;line-height:1.75;text-transform:uppercase;min-width:64px;padding:4px 5px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:rgb(2, 15, 45);color:#fff;font-family:"Roboto",sans-serif;font-weight:500;font-size:0.9285714285714286rem;line-height:1.75;margin-right:16px;}.css-oln6gq:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(2, 15, 45, 0.04);}@media (hover: none){.css-oln6gq:hover{background-color:transparent;}}.css-oln6gq.Mui-disabled{color:rgba(0, 0, 0, 0.26);}.css-oln6gq svg{margin-right:4px;}
+      </style>
+      <style data-emotion="css u7ihf3">
+       .css-u7ihf3{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;font-weight:600;font-family:"Roboto",sans-serif;font-size:0.7544642857142857rem;line-height:1.75;text-transform:uppercase;min-width:64px;padding:4px 5px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:rgb(2, 15, 45);color:#fff;font-family:"Roboto",sans-serif;font-weight:500;font-size:0.9285714285714286rem;line-height:1.75;margin-right:16px;}.css-u7ihf3::-moz-focus-inner{border-style:none;}.css-u7ihf3.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-u7ihf3{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-u7ihf3:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(2, 15, 45, 0.04);}@media (hover: none){.css-u7ihf3:hover{background-color:transparent;}}.css-u7ihf3.Mui-disabled{color:rgba(0, 0, 0, 0.26);}.css-u7ihf3 svg{margin-right:4px;}
+      </style>
+      <a class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-u7ihf3" href="/" tabindex="0">
+       <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vnjz4i" data-testid="HomeOutlinedIcon" focusable="false" viewbox="0 0 24 24">
+        <path d="m12 5.69 5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3 2 12h3v8h6v-6h2v6h6v-8h3L12 3z">
+        </path>
+       </svg>
+       Home
+      </a>
+      <a class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root css-u7ihf3" href="/classifier" tabindex="0">
+       <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vnjz4i" data-testid="InsertPhotoOutlinedIcon" focusable="false" viewbox="0 0 24 24">
+        <path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4.86 8.86-3 3.87L9 13.14 6 17h12l-3.86-5.14z">
+        </path>
+       </svg>
+       Image Classifier
+      </a>
+      <style data-emotion="css 1bz42as">
+       .css-1bz42as{margin:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;border-width:0;border-style:solid;border-color:rgb(197, 197, 197);border-bottom-width:0;height:100%;border-right-width:thin;height:32px;margin-left:16px;margin-right:16px;}@media (min-width:0px){.css-1bz42as{display:none;}}@media (min-width:900px){.css-1bz42as{display:none;}}@media (min-width:1200px){.css-1bz42as{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}}
+      </style>
+      <hr class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical css-1bz42as"/>
+      <style data-emotion="css x4v26s">
+       @media (min-width:0px){.css-x4v26s{display:none;}}@media (min-width:900px){.css-x4v26s{display:none;}}@media (min-width:1200px){.css-x4v26s{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}}
+      </style>
+      <div class="MuiBox-root css-x4v26s">
+       <style data-emotion="css 1amx1be">
+        .css-1amx1be{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.3928571428571428rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:rgb(2, 15, 45);color:#fff;font-family:"Roboto",sans-serif;font-weight:500;font-size:0.9285714285714286rem;line-height:1.75;margin-right:16px;}.css-1amx1be:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1amx1be:hover{background-color:transparent;}}.css-1amx1be:hover{background-color:rgba(2, 15, 45, 0.04);}@media (hover: none){.css-1amx1be:hover{background-color:transparent;}}.css-1amx1be.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}.css-1amx1be svg{margin-right:4px;}
+       </style>
+       <style data-emotion="css 1npi666">
+        .css-1npi666{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.3928571428571428rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:rgb(2, 15, 45);color:#fff;font-family:"Roboto",sans-serif;font-weight:500;font-size:0.9285714285714286rem;line-height:1.75;margin-right:16px;}.css-1npi666::-moz-focus-inner{border-style:none;}.css-1npi666.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1npi666{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1npi666:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1npi666:hover{background-color:transparent;}}.css-1npi666:hover{background-color:rgba(2, 15, 45, 0.04);}@media (hover: none){.css-1npi666:hover{background-color:transparent;}}.css-1npi666.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}.css-1npi666 svg{margin-right:4px;}
+       </style>
+       <a aria-label="LinkedIn" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeMedium css-1npi666" href="https://www.linkedin.com/in/chi-han-lin-498310126/" tabindex="0" target="_blank">
+        <style data-emotion="css 1lme6gy">
+         .css-1lme6gy{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:2.03125rem;}
+        </style>
+        <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-1lme6gy" data-testid="LinkedInIcon" focusable="false" viewbox="0 0 24 24">
+         <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z">
+         </path>
+        </svg>
+       </a>
+       <a aria-label="Instagram" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeMedium css-1npi666" href="https://www.instagram.com/chihan.lin/" tabindex="0" target="_blank">
+        <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-1lme6gy" data-testid="InstagramIcon" focusable="false" viewbox="0 0 24 24">
+         <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z">
+         </path>
+        </svg>
+       </a>
+      </div>
+      <style data-emotion="css q4o6hk">
+       .css-q4o6hk{margin:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;border-width:0;border-style:solid;border-color:rgb(197, 197, 197);border-bottom-width:thin;}
+      </style>
+      <hr class="MuiDivider-root MuiDivider-fullWidth css-q4o6hk"/>
+     </div>
+     <hr class="MuiDivider-root MuiDivider-fullWidth css-q4o6hk"/>
+    </header>
+    <style data-emotion="css a3xyjy">
+     .css-a3xyjy{z-index:1200;}
+    </style>
+    <main>
+     <style data-emotion="css 1clx65y">
+      .css-1clx65y{width:100%;margin:0 auto;padding-top:240px;background-color:rgb(242, 243, 245);}@media (min-width:600px){.css-1clx65y{max-width:720px;}}@media (min-width:900px){.css-1clx65y{max-width:1236px;}}
+     </style>
+     <div class="MuiBox-root css-1clx65y" style="background-image:url(/images/ScrollGroup3.png);background-size:cover;min-height:1000px;max-width:100%;position:relative">
+      <style data-emotion="css 2uf1l0">
+       .css-2uf1l0{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-32px;width:calc(100% + 32px);margin-left:-32px;margin-top:0px;}.css-2uf1l0>.MuiGrid-item{padding-top:32px;}.css-2uf1l0>.MuiGrid-item{padding-left:32px;}
+      </style>
+      <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-2uf1l0">
+       <style data-emotion="css iol86l">
+        .css-iol86l{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:100%;}@media (min-width:600px){.css-iol86l{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:100%;}}@media (min-width:900px){.css-iol86l{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:50%;}}@media (min-width:1200px){.css-iol86l{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:50%;}}@media (min-width:1536px){.css-iol86l{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:50%;}}
+       </style>
+       <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-iol86l">
+        <style data-emotion="css 12595yo">
+         .css-12595yo{margin-bottom:0px;}
+        </style>
+        <div class="MuiBox-root css-12595yo" data-aos="fade-right" style="position:relative;z-index:1">
+         <style data-emotion="css 1qm1lh">
+          .css-1qm1lh{margin-bottom:16px;}
+         </style>
+         <div class="MuiBox-root css-1qm1lh">
+          <style data-emotion="css 1lpv3l4">
+           .css-1lpv3l4{margin:0;font-size:2rem;font-weight:600;line-height:1.25;font-family:"Roboto",sans-serif;text-align:center;color:rgb(255, 255, 255);margin-top:00px;}
+          </style>
+          <h1 class="MuiTypography-root MuiTypography-h1 MuiTypography-alignCenter css-1lpv3l4">
+           Select an Image for Classification
+          </h1>
+         </div>
+         <style data-emotion="css i3pbo">
+          .css-i3pbo{margin-bottom:24px;}
+         </style>
+         <div class="MuiBox-root css-i3pbo">
+          <style data-emotion="css 1urcek9">
+           .css-1urcek9{margin:0;font-size:1.125rem;font-weight:500;line-height:1.25;font-family:"Roboto",sans-serif;text-align:center;color:rgb(123, 132, 140);padding-top:24px;padding-bottom:24px;margin-bottom:15px;}
+          </style>
+          <h4 class="MuiTypography-root MuiTypography-h4 MuiTypography-alignCenter css-1urcek9">
+           The App Is Dedicated To Classifying The Dog Breed
+           <br/>
+           And Providing Information On Wikipedia With Just One Click Away.
+          </h4>
+         </div>
+         <style data-emotion="css yuw4dm">
+          .css-yuw4dm{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;margin-top:32px;}@media (min-width:0px){.css-yuw4dm{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:stretched;-webkit-box-align:stretched;-ms-flex-align:stretched;align-items:stretched;}}@media (min-width:600px){.css-yuw4dm{-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;}}
+         </style>
+         <div class="MuiBox-root css-yuw4dm">
+          <style data-emotion="css 14pca16">
+           .css-14pca16{font-weight:600;font-family:"Roboto",sans-serif;font-size:0.8705357142857143rem;line-height:1.75;text-transform:uppercase;min-width:64px;padding:8px 22px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:#fff;background-color:rgb(2, 15, 45);box-shadow:0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);box-shadow:none;padding:10px 25px;margin-right:15px;font-size:18px;border:2px solid white;}.css-14pca16:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgb(1, 10, 31);box-shadow:0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);}@media (hover: none){.css-14pca16:hover{background-color:rgb(2, 15, 45);}}.css-14pca16:active{box-shadow:0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);}.css-14pca16.Mui-focusVisible{box-shadow:0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);}.css-14pca16.Mui-disabled{color:rgba(0, 0, 0, 0.26);box-shadow:none;background-color:rgba(0, 0, 0, 0.12);}.css-14pca16:hover{box-shadow:none;}.css-14pca16.Mui-focusVisible{box-shadow:none;}.css-14pca16:active{box-shadow:none;}.css-14pca16.Mui-disabled{box-shadow:none;}.css-14pca16:hover{background-color:white;color:rgb(2, 15, 45);border:2px solid rgb(255, 255, 255);}
+          </style>
+          <style data-emotion="css 8l8r65">
+           .css-8l8r65{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;font-weight:600;font-family:"Roboto",sans-serif;font-size:0.8705357142857143rem;line-height:1.75;text-transform:uppercase;min-width:64px;padding:8px 22px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:#fff;background-color:rgb(2, 15, 45);box-shadow:0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);box-shadow:none;padding:10px 25px;margin-right:15px;font-size:18px;border:2px solid white;}.css-8l8r65::-moz-focus-inner{border-style:none;}.css-8l8r65.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-8l8r65{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-8l8r65:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgb(1, 10, 31);box-shadow:0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);}@media (hover: none){.css-8l8r65:hover{background-color:rgb(2, 15, 45);}}.css-8l8r65:active{box-shadow:0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);}.css-8l8r65.Mui-focusVisible{box-shadow:0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);}.css-8l8r65.Mui-disabled{color:rgba(0, 0, 0, 0.26);box-shadow:none;background-color:rgba(0, 0, 0, 0.12);}.css-8l8r65:hover{box-shadow:none;}.css-8l8r65.Mui-focusVisible{box-shadow:none;}.css-8l8r65:active{box-shadow:none;}.css-8l8r65.Mui-disabled{box-shadow:none;}.css-8l8r65:hover{background-color:white;color:rgb(2, 15, 45);border:2px solid rgb(255, 255, 255);}
+          </style>
+          <a class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-disableElevation MuiButtonBase-root css-8l8r65" href="/classifier" tabindex="0">
+           Get Started
+          </a>
+          <style data-emotion="css 61wi1b">
+           @media (min-width:0px){.css-61wi1b{margin-top:16px;width:100%;}}@media (min-width:600px){.css-61wi1b{margin-top:0px;margin-left:8px;}}@media (min-width:900px){.css-61wi1b{width:auto;}}
+          </style>
+          <div class="MuiBox-root css-61wi1b">
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </main>
+    <style data-emotion="css 14jvf2n">
+     .css-14jvf2n{background-color:rgb(2, 15, 45);position:fixed;bottom:0;left:0;width:100%;}
+    </style>
+    <div class="MuiBox-root css-14jvf2n">
+     <style data-emotion="css 1ebnq5j">
+      .css-1ebnq5j{background-color:rgb(2, 15, 45);position:relative;padding:8px;}
+     </style>
+     <div class="MuiBox-root css-1ebnq5j">
+      <style data-emotion="css 1d3bbye">
+       .css-1d3bbye{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+      </style>
+      <div class="MuiGrid-root MuiGrid-container css-1d3bbye">
+       <style data-emotion="css yov6up">
+        .css-yov6up{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:100%;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}@media (min-width:600px){.css-yov6up{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:100%;}}@media (min-width:900px){.css-yov6up{-webkit-flex-basis:33.333333%;-ms-flex-preferred-size:33.333333%;flex-basis:33.333333%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:33.333333%;}}@media (min-width:1200px){.css-yov6up{-webkit-flex-basis:33.333333%;-ms-flex-preferred-size:33.333333%;flex-basis:33.333333%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:33.333333%;}}@media (min-width:1536px){.css-yov6up{-webkit-flex-basis:33.333333%;-ms-flex-preferred-size:33.333333%;flex-basis:33.333333%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:33.333333%;}}
+       </style>
+       <div class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-yov6up">
+        <style data-emotion="css 1ontqvh">
+         .css-1ontqvh{list-style:none;margin:0;padding:0;position:relative;padding-top:8px;padding-bottom:8px;}
+        </style>
+        <ul class="MuiList-root MuiList-padding css-1ontqvh">
+         <style data-emotion="css 2b4dnx">
+          .css-2b4dnx{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative;-webkit-text-decoration:none;text-decoration:none;min-width:0;box-sizing:border-box;text-align:left;padding-top:8px;padding-bottom:8px;-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;padding-left:16px;padding-right:16px;}.css-2b4dnx:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-2b4dnx:hover{background-color:transparent;}}.css-2b4dnx.Mui-selected{background-color:rgba(2, 15, 45, 0.08);}.css-2b4dnx.Mui-selected.Mui-focusVisible{background-color:rgba(2, 15, 45, 0.2);}.css-2b4dnx.Mui-selected:hover{background-color:rgba(2, 15, 45, 0.12);}@media (hover: none){.css-2b4dnx.Mui-selected:hover{background-color:rgba(2, 15, 45, 0.08);}}.css-2b4dnx.Mui-focusVisible{background-color:rgba(0, 0, 0, 0.12);}.css-2b4dnx.Mui-disabled{opacity:0.38;}
+         </style>
+         <style data-emotion="css rkofmw">
+          .css-rkofmw{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative;-webkit-text-decoration:none;text-decoration:none;min-width:0;box-sizing:border-box;text-align:left;padding-top:8px;padding-bottom:8px;-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;padding-left:16px;padding-right:16px;}.css-rkofmw::-moz-focus-inner{border-style:none;}.css-rkofmw.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-rkofmw{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-rkofmw:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-rkofmw:hover{background-color:transparent;}}.css-rkofmw.Mui-selected{background-color:rgba(2, 15, 45, 0.08);}.css-rkofmw.Mui-selected.Mui-focusVisible{background-color:rgba(2, 15, 45, 0.2);}.css-rkofmw.Mui-selected:hover{background-color:rgba(2, 15, 45, 0.12);}@media (hover: none){.css-rkofmw.Mui-selected:hover{background-color:rgba(2, 15, 45, 0.08);}}.css-rkofmw.Mui-focusVisible{background-color:rgba(0, 0, 0, 0.12);}.css-rkofmw.Mui-disabled{opacity:0.38;}
+         </style>
+         <div class="MuiListItemButton-root MuiListItemButton-gutters MuiButtonBase-root css-rkofmw" role="button" tabindex="0">
+          <style data-emotion="css 1tsvksn">
+           .css-1tsvksn{-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;min-width:0;margin-top:4px;margin-bottom:4px;}
+          </style>
+          <div class="MuiListItemText-root css-1tsvksn">
+           <style data-emotion="css 1lvv30u">
+            .css-1lvv30u{margin:0;font-family:"Roboto",sans-serif;font-weight:400;font-size:0.8125rem;line-height:1.43;color:rgb(123, 132, 140);}
+           </style>
+           <p class="MuiTypography-root MuiTypography-body2 css-1lvv30u">
+            Copyright ©
+            <!-- -->
+            2022
+            <!-- -->
+            Chi-Han.Lin FMP.
+           </p>
+          </div>
+         </div>
+        </ul>
+       </div>
+       <div class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-yov6up">
+        <ul class="MuiList-root MuiList-padding css-1ontqvh">
+         <div class="MuiListItemButton-root MuiListItemButton-gutters MuiButtonBase-root css-rkofmw" role="button" tabindex="0">
+          <div class="MuiListItemText-root css-1tsvksn">
+           <p class="MuiTypography-root MuiTypography-body2 css-1lvv30u">
+            Image by
+            <!-- -->
+            <style data-emotion="css dl1hpv">
+             .css-dl1hpv{-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(123, 132, 140, 0.4);color:rgb(123, 132, 140);}.css-dl1hpv:hover{text-decoration-color:inherit;}
+            </style>
+            <style data-emotion="css 17zgj4h">
+             .css-17zgj4h{margin:0;color:rgb(123, 132, 140);-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(123, 132, 140, 0.4);color:rgb(123, 132, 140);}.css-17zgj4h:hover{text-decoration-color:inherit;}
+            </style>
+            <a alt="starline" class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-17zgj4h" href="https://www.freepik.com/author/starline" rel="noreferrer" target="_blank">
+             starline
+            </a>
+            <!-- -->
+            on
+            <!-- -->
+            <a alt="Unsplash" class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-17zgj4h" href="https://www.freepik.com/free-vector/technological-background-with-circuit-lines-diagram-blue-color_9106760.htm#page=2&amp;query=digital%20technology%20background&amp;position=5&amp;from_view=search#position=5&amp;page=2&amp;query=digital%20technology%20background" rel="noreferrer" target="_blank">
+             freepik
+            </a>
+            .
+           </p>
+          </div>
+         </div>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script id="__NEXT_DATA__" type="application/json">
+   {"props":{"pageProps":{}},"page":"/","query":{},"buildId":"ouYKFw-anUtWZe5kXsJXk","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}
+  </script>
+ </body>
+</html>
