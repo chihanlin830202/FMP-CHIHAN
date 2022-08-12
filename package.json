@@ -36,5 +36,7 @@
   },
   "devDependencies": {
     "regenerator-runtime": "^0.13.9"
-  }
+  },
+  "cacheDirectories": 
+  [".next/cache"]
 }
